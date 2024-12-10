@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Options - ServiceHub</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .navbar {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 50px;
+            align-items: center;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin-left: 15px;
+        }
+        .services-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 30px;
+        }
+        .service-card {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            width: 250px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .service-card:hover {
+            transform: scale(1.05);
+        }
+        .service-card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 15px;
+        }
+        .service-card h3 {
+            margin: 10px 0;
+        }
+        .book-now-btn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .book-now-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logo">ServiceHub</a>
+        <div class="navbar-links">
+            <a href="#">Home</a>
+            <a href="#">Services</a>
+            <a href="#">Bookings</a>
+            <a href="#">Profile</a>
+            <a href="#">Logout</a>
+        </div>
+    </nav>
+
+    <!-- Services Container -->
+    <div class="services-container">
+        <!-- AC Technicians -->
+        <div class="service-card">
+            <img src="images/ac_electrician.jpg" alt="AC Technician">
+            <h3>AC Technicians</h3>
+            <p>Expert repair and maintenance for all AC units</p>
+            <button class="book-now-btn">Book Now</button>
+        </div>
+
+        <!-- Electricians -->
+        <div class="service-card">
+            <img src="images/electrian.jpg" alt="Electrician">
+            <h3>Electricians</h3>
+            <p>Professional electrical installation and repair</p>
+            <button class="book-now-btn">Book Now</button>
+        </div>
+
+        <!-- Plumbers -->
+        <div class="service-card">
+            <img src="images/plumber.jpg" alt="Plumber">
+            <h3>Plumbers</h3>
+            <p>Comprehensive plumbing solutions</p>
+            <button class="book-now-btn">Book Now</button>
+        </div>
+
+        <!-- Mechanics -->
+        <div class="service-card">
+            <img src="images/mechanics.jpg" alt="Mechanic">
+            <h3>Mechanics</h3>
+            <p>Vehicle repair and maintenance services</p>
+            <button class="book-now-btn">Book Now</button>
+        </div>
+
+        <!-- Carpenters -->
+        <div class="service-card">
+            <img src="images/carpenter.jpg" alt="Carpenter">
+            <h3>Carpenters</h3>
+            <p>Custom woodwork and furniture repair</p>
+            <button class="book-now-btn">Book Now</button>
+        </div>
+
+        <!-- Cleaning Services -->
+        <div class="service-card">
+            <img src="images/clean.jpg" alt="Cleaning Service">
+            <h3>Cleaning Services</h3>
+            <p>Professional home and office cleaning</p>
+            <button class="book-now-btn">Book Now</button>
+        </div>
+
+        <!-- Pest Control -->
+        <div class="service-card">
+            <img src="images/cleaning.jpg" alt="Pest Control">
+            <h3>Pest Control</h3>
+            <p>Comprehensive pest elimination services</p>
+            <button class="book-now-btn">Book Now</button>
+        </div>
+
+        <!-- Home Appliances Repair -->
+        <div class="service-card">
+            <img src="images/home_appli.jpg" alt="Appliance Repair">
+            <h3>Home Appliances Repair</h3>
+            <p>Expert repair for all household appliances</p>
+            <button class="book-now-btn">Book Now</button>
+        </div>
+
+        <!-- Building Painting -->
+        <div class="service-card">
+            <img src="images/paint.jpg" alt="Painting Service">
+            <h3>Building Painting</h3>
+            <p>Professional painting and decoration services</p>
+            <button class="book-now-btn">Book Now</button>
+        </div>
+    </div>
+
+    <script>
+        // Future interactivity can be added here
+        document.querySelectorAll('.book-now-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const serviceName = this.closest('.service-card').querySelector('h3').textContent;
+                alert(`You are booking a ${serviceName} service. Booking form coming soon!`);
+            });
+        });
+    </script>
+</body>
+</html>
